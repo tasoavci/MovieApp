@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "orientation": "default",
+    "web": {
+      "output": "static",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://n"
+        }
+      ]
+    ],
+    "name": "myAwesomeProject",
+    "slug": "myAwesomeProject",
+    "userInterfaceStyle":"automatic",
+    "experiments":{
+      "typedRoutes" : true
+    }
+  }
+}
