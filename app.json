@@ -16,9 +16,20 @@
     ],
     "name": "myAwesomeProject",
     "slug": "myAwesomeProject",
-    "userInterfaceStyle":"automatic",
-    "experiments":{
-      "typedRoutes" : true
+    "userInterfaceStyle": "automatic",
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": "https://n"
+      },
+      "eas": {
+        "projectId": "21baed5b-1de2-4656-bae9-5e8be72f5fb0"
+      }
+    },
+    "android": {
+      "package": "com.tasoavci.myAwesomeProject"
     }
   }
 }

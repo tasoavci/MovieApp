@@ -22,6 +22,7 @@ import {
   fetchTrendingMovies,
   fetchUpcomingMovies,
 } from "api/moviedb";
+import { auth } from "../../../firebase";
 
 export default function HomeScreen() {
   const [trending, setTrending] = useState([]);
@@ -69,11 +70,16 @@ export default function HomeScreen() {
     <View className="flex-1 dark:bg-neutral-800 bg-white ">
       <SafeAreaView className={ios ? "mb-3" : "mt-16"}>
         <View className="flex-row justify-between items-center mx-4">
-          <Bars3CenterLeftIcon
-            size={34}
-            strokeWidth={2}
-            color={darkModeColor}
-          />
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Profile" as never)}
+          >
+            <Bars3CenterLeftIcon
+              size={34}
+              strokeWidth={2}
+              color={darkModeColor}
+            />
+          </TouchableOpacity>
+
           <Text className="text-3xl text-black font-bold dark:text-white">
             <Text className={primaryColor}>M</Text>ovies
           </Text>
@@ -101,11 +107,11 @@ export default function HomeScreen() {
           {trending.length > 0 && <TrendingMovies data={trending} />}
           {/* upcoming movies */}
           {upcoming.length > 0 && (
-            <MovieList title="Upcoming" data={upcoming} />
+            <MovieList title="Upcoming" data={upcoming} hideSeeAll={true} />
           )}
           {/* top rated movies */}
           {topRated.length > 0 && (
-            <MovieList title="Top rated" data={topRated} />
+            <MovieList title="Top rated" data={topRated} hideSeeAll={true} />
           )}
         </ScrollView>
       )}

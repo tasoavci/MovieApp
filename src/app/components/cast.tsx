@@ -21,7 +21,7 @@ export default function Cast({ navigation, cast }: CastProps) {
   let personName = "Keanu Reevs";
   let characterName = "John Wick";
   const { width, height } = Dimensions.get("window");
-  console.log(JSON.stringify(cast, null, 2));
+  //   console.log(JSON.stringify(cast, null, 2));
   return (
     <View className="my-6">
       <Text className="text-black dark:text-white text-lg mx-4 mb-5">
